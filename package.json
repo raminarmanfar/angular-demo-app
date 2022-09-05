@@ -7,6 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "test:deep": "ng test --no-watch --code-coverage --browsers ChromeHeadless --source-map=false",
+    "test:ci": "ng test --watch=false --browsers=ChromeHeadless",
     "lint": "ng lint"
   },
   "private": true,
@@ -42,7 +44,6 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
-    "puppeteer": "^17.1.0",
     "typescript": "~4.7.2"
   }
 }
