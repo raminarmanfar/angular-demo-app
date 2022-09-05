@@ -34,11 +34,13 @@ module.exports = function (config) {
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    browsers: ["chromeCustom"],
+    browsers: ["Chrome", "Chrome_without_security"], // You may use 'ChromeCanary', 'Chromium' or any other supported browser
+
+    // you can define custom flags
     customLaunchers: {
-      chromeCustom: {
-        base: "ChromeHeadless",
-        flags: ["--no-sandbox", "--disable-gpu", "--disable-extensions"],
+      Chrome_without_security: {
+        base: "Chrome",
+        flags: ["--disable-web-security", "--disable-site-isolation-trials"],
       },
     },
     singleRun: false,
