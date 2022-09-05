@@ -9,7 +9,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "test:deep": "ng test --no-watch --code-coverage",
-    "test:ci": "ng test --progress=false --watch false",
+    "test:ci": "ng test --progress=false --watch=false",
     "lint": "ng lint"
   },
   "private": true,
